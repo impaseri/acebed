@@ -29,9 +29,21 @@ let data = [
         content : "K",
         type : "T Type",
         color: "쉬폰베이지"
+    },
+    {
+        id : 4,
+        title : "BMA-1167",
+        content : "LQ",
+        type : "T Type",
+        color: "버지니아윌럿"
+    },
+    {
+        id : 5,
+        title : "LENE",
+        content : "K / LQ",
+        type : "T Type",
+        color: "코랄블루"
     }
 ];
 
-// 기본값은 하나만 지정할 수 있기 때문에
-// 변수가 두 개일 경우 중괄호에
 export default data;

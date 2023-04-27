@@ -10,8 +10,6 @@ import Detail from './Pages/Detail';
 import About from './Pages/About';
 import banner from './banner01.png';
 
-// 앞에 use 붙는 것들 훅이라고 부름, 유용한 것들이 들어 있는 함수라고 보면 됨
-
 let count = 0;
 
 
@@ -29,8 +27,8 @@ function App() {
             <Nav.Link onClick={()=>{navigate('/')}}>Home</Nav.Link>
             <Nav.Link onClick={()=>{navigate('/detail')}}>Detail</Nav.Link>
             <Nav.Link onClick={()=>{navigate('/about')}}>About</Nav.Link>
-            <Nav.Link  onClick={()=>{navigate(-1)}}>이전</Nav.Link>
-            <Nav.Link  onClick={()=>{navigate(1)}}>다음</Nav.Link>
+            {/* <Nav.Link  onClick={()=>{navigate(-1)}}>이전</Nav.Link>
+            <Nav.Link  onClick={()=>{navigate(1)}}>다음</Nav.Link> */}
           </Nav>
         </Container>
       </Navbar>
@@ -52,8 +50,8 @@ function App() {
               </div>
             </div>
             {
-                  count < 2 ?   
-                  <button onClick={()=>{
+                  count < 1 ?   
+                  <button className='btn-4' onClick={()=>{
                     count = count + 1;
                     axios.get('https://20345620-7f06-4efb-80a0-5d68aef1c5a2.mock.pstmn.io/productlist')
                     .then((result)=>{
@@ -72,12 +70,7 @@ function App() {
           <Route path='location' element={<div>회사위치</div>}/>
         </Route>
         <Route path='/detail/:id' element={<Detail items={items}/>}></Route>
-        {/* /:id 뒤에 뭐가 들어가든 url이 생성됨 */}
-        {/* user가 뭐라고 치든간에 detail 컴포넌트를 열어 줘라 */}
-        {/* use parms */}
-
-        <Route path='*' element={<div>돌아가시오</div>}></Route>
-        {/* 지정된 것 이외의 모든 페이지 404페이지 짜 주면 됨 */}
+        <Route path='*' element={<div>Detail</div>}></Route>
       </Routes>
 
 

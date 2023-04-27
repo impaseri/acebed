@@ -6,9 +6,6 @@ import { useParams } from 'react-router-dom';
 const Detail = (props) => {
 
     let {id} = useParams();
-    // user가 url에 입력한 그대로 저장해 준다
-    //작명한 그대로 써야 한다
-
     
     let [alerta, setAlerta] = useState(true);
     useEffect(()=>{
@@ -32,8 +29,6 @@ const Detail = (props) => {
                 <div className="row">
                     <div className="col-md-6">
                     <img src={process.env.PUBLIC_URL + '/img/bed_0' + props.items[id].id + '.jpg'}/>
-                    {/* 그냥 id만 불러와서 사용해도 문제는 없지만 */}
-                    {/* 아래에서 같은 형식으로 데이터를 받아오기 때문에 변동되었을 때 따로 변경할 일 없도록 */}
                     </div>
                     <div className="col-md-6">
                     <p>{props.items[id].content}</p>
