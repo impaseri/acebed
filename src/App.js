@@ -6,9 +6,10 @@ import './App.css';
 import { Routes, Route, Link, useNavigate, Outlet } from 'react-router-dom';
 import data from './data.js';
 import List from './Component/List';
+import Slide from './Component/Slide';
+
 import Detail from './Pages/Detail';
 import About from './Pages/About';
-import banner from './banner01.png';
 
 let count = 0;
 
@@ -37,7 +38,7 @@ function App() {
       <Routes>
         <Route path='/' element={
         <>
-          <div className='mainBanner' style={{backgroundImage: 'url(' + banner + ')'}}></div>
+          <Slide/>
           <div className="container">
             <div className="inner">
               <h2>BEST 상품</h2>

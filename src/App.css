@@ -42,6 +42,10 @@
   background-repeat: no-repeat;
 }
 
+.mainBanner .slick-dots{
+  bottom: 50px;
+}
+
 .container{
   width: 1280px;
   margin: 0 auto;
