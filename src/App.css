@@ -5,6 +5,23 @@
   font-style: normal;
 }
 
+ul,li{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+h2{
+  font-size: 65px;
+  font-weight: 700;
+  line-height: 80px;
+}
+h3{
+  font-size: 45px;
+  font-weight: 400;
+  line-height: 55px;
+}
 .App {
   font-family: 'Pretendard';
 
@@ -30,26 +47,187 @@
 }
 
 .navbar{
-  /* margin-bottom: 80px; */
+  margin-bottom: 80px;
   color: #000;
 
 }
 
 .mainBanner{
-  width: 1280px;
-  height: 400px;
+  height: 760px;
   margin: 0 auto;
   background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.mainBanner .flex{
+  display: flex !important;
+  justify-content: space-between;
+}
+
+.mainBanner .flex .bannerText{
+  width: 30%;
+  height: 760px;
+  padding: 70px 20px;
+}
+.mainBanner .flex .bannerImg{
+  display: block;
+  width: 70%;
 }
 
 .mainBanner .slick-dots{
   bottom: 50px;
 }
 
+.mainBanner .smallText{
+  margin-top: 50px;
+  position: relative;
+}
+
+.mainBanner .smallText span{
+  display: block;
+  width: 28px;
+  height: 28px;
+  background-color: #00a0d9;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 70px;
+}
+
+.mainBanner .slick-prev{
+  display: block;
+  z-index: 1;
+  top: 85%;
+  left: 20px;
+}
+.mainBanner .slick-next{
+  display: block;
+  z-index: 1;
+  top: 85%;
+  left: 120px;
+}
+
+.mainBanner .slick-prev::before{
+  content: url(../public/img/prevBtn.png);
+}
+
+.mainBanner .slick-next::before{
+  content: url(../public/img/nextBtn.png);
+}
+
+.section_01{
+  padding-bottom: 50px;
+  border-bottom: solid 1px #dee2e6;
+}
+
+.title{
+  margin: 150px 0 50px;
+  text-align: center;
+}
+.section_01 >h3{
+  margin: 150px 0 50px;
+  text-align: center;
+}
+.section_01 .videoBox{
+  position: relative;
+}
+
+.section_01 .videoBox >div{
+  overflow: hidden;
+  margin: 0 auto;
+  position: relative;
+}
+
+.section_01 .videoBox video{
+  position: absolute;
+  top: 0;
+  left: -400px;
+  width: 1440px !important;
+}
+
+.slick-dots{
+  top: 0;
+  left: 0;
+  height: 400px;
+}
+
+.section_01 .slick-dots li{
+  width:100%;
+  margin-bottom: 40px;
+}
+
+.section_01 .slick-dots li.slick-active button:before{
+  font-weight: 700;
+  font-size: 25px;
+  color: #00a0d9;
+  line-height: 30px;
+}
+
+.section_01 .slick-dots li button::before{
+  width: 100%;
+  text-align: left;
+  display: block;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 25px;
+  transition: 0.4s ease; 
+}
+
+.section_01 .slick-dots li:nth-child(1) button::before{
+  content: "HYBRID Z SPRING";
+}
+
+.section_01 .slick-dots li:nth-child(2) button::before{
+  content: "5 FREE SYSTEM";
+}
+
+.section_01 .slick-dots li:nth-child(3) button::before{
+  content: "NEW MATERIAL";
+}
+
+.section_01 .slick-dots li:nth-child(4) button::before{
+  content: "ECO & HEALTH";
+}
+
+.mainBanner .slick-dots li.slick-active button:before{
+  color: #000;
+}
+
+.section_01 .videoBox .text{
+  position: absolute;
+  right: 70px;
+  bottom: 0;
+  font-size: 32px
+}
+
+.section_01 .text p{
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.section_01 .text .small{
+  font-size: 14px;
+  font-weight: 400;
+  color: #ccc;
+}
+
+
+/* tab */
+.nav-tabs{
+  --bs-nav-tabs-border-width:0;
+  justify-content: center;
+}
+
+.tab-content>.active{
+  width: 1440px;
+  margin: 0 auto;
+}
+
 .container{
-  width: 1280px;
+  width: 1440px;
   margin: 0 auto;
   --bs-gutter-x: 0;
+  max-width: 1440px;
 }
 
 .container::after{
@@ -82,78 +260,3 @@
 }
 
 
-.btn-4 {
-  float: right;
-  width: 900px;
-  height: 60px;
-  border: 0;
-  outline: none;
-  background-color: #4dccc6;
-  background-image: linear-gradient(315deg, #4dccc6 0%, #96e4df 74%);
-  line-height: 42px;
-  padding: 0;
-  border: none;
-  margin: 0 0 80px;
-}
-.btn-4:hover{
-  background-color: #89d8d3;
-background-image: linear-gradient(315deg, #89d8d3 0%, #03c8a8 74%);
-}
-.btn-4 span {
-  position: relative;
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-.btn-4:before,
-.btn-4:after {
-  position: absolute;
-  content: "";
-  right: 0;
-  top: 0;
-   box-shadow:  4px 4px 6px 0 rgba(255,255,255,.9),
-              -4px -4px 6px 0 rgba(116, 125, 136, .2), 
-    inset -4px -4px 6px 0 rgba(255,255,255,.9),
-    inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
-  transition: all 0.3s ease;
-}
-.btn-4:before {
-  height: 0%;
-  width: .1px;
-}
-.btn-4:after {
-  width: 0%;
-  height: .1px;
-}
-.btn-4:hover:before {
-  height: 100%;
-}
-.btn-4:hover:after {
-  width: 100%;
-}
-.btn-4 span:before,
-.btn-4 span:after {
-  position: absolute;
-  content: "";
-  left: 0;
-  bottom: 0;
-  box-shadow:  4px 4px 6px 0 rgba(255,255,255,.9),
-              -4px -4px 6px 0 rgba(116, 125, 136, .2), 
-    inset -4px -4px 6px 0 rgba(255,255,255,.9),
-    inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
-  transition: all 0.3s ease;
-}
-.btn-4 span:before {
-  width: .1px;
-  height: 0%;
-}
-.btn-4 span:after {
-  width: 0%;
-  height: .1px;
-}
-.btn-4 span:hover:before {
-  height: 100%;
-}
-.btn-4 span:hover:after {
-  width: 100%;
-}
