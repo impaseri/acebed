@@ -22,6 +22,7 @@ h3{
   font-weight: 400;
   line-height: 55px;
 }
+
 .App {
   font-family: 'Pretendard';
 
@@ -47,7 +48,6 @@ h3{
 }
 
 .navbar{
-  margin-bottom: 80px;
   color: #000;
 
 }
@@ -57,6 +57,7 @@ h3{
   margin: 0 auto;
   background-repeat: no-repeat;
   overflow: hidden;
+  padding-top: 80px;
 }
 
 .mainBanner .flex{
@@ -121,7 +122,7 @@ h3{
 }
 
 .title{
-  margin: 150px 0 50px;
+  margin: 100px 0 50px;
   text-align: center;
 }
 .section_01 >h3{
@@ -221,6 +222,16 @@ h3{
 .tab-content>.active{
   width: 1440px;
   margin: 0 auto;
+  height: 300px;
+  padding-bottom: 50px;
+}
+
+.nav-tabs .nav-item.show , .nav-tabs .nav-link.active{
+  color: #00a0d9;
+}
+
+.nav-link{
+  color: #000;
 }
 
 .container{
@@ -253,10 +264,291 @@ h3{
   flex-wrap: wrap;
   justify-content: flex-end;
   padding-bottom: 30px;
+  position: relative;
 }
 
 .inner .listbox >div{
   margin-left: 50px;
 }
 
+
+.morebtn{
+  position: absolute;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 0;
+  outline: none;
+  background-color: #00a0d9;
+  color: #fff;
+}
+
+.btn1{
+  top: 100%;
+}
+
+/* detail */
+.detailBox{
+  width: 100%;
+  position: relative;
+}
+
+.detailBox .detail1{
+  position: relative;
+}
+
+
+.detailBox .detail1 h2{
+  position: absolute;
+  left: 250px;
+  top: 130px;
+  color: #fff;
+  font-size: 90px;
+
+}
+
+.popup{
+  position: absolute;
+  right: 100px;
+  bottom: 530px;
+
+}
+
+.popup >div img{
+  border-radius: 30px;
+}
+
+.sticky{
+  position: absolute;
+  right: 100px;
+  bottom: 90px;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 50px 40px;
+  border-radius: 30px ;
+}
+
+.btn{
+  width: 47%;
+  color: #fff;
+  height: 50px;
+}
+
+.btn-blue{
+  background-color: #00a0d9;
+  border-color: #00a0d9;
+}
+
+.btn-green{
+  background-color: #aacd06;
+  border-color: #aacd06;
+  margin-left: 3%;
+}
+
+.input input{
+  border: 0;
+  width: 97%;
+  line-height: 30px;
+  padding: 10px;
+}
+
+.input{
+  margin-top: 60px;
+}
+
+
+.detailMain >img{
+  width: 100%;
+  height: calc(100vh - 74px);
+}
+.col-md-6{
+  margin-bottom: 50px;
+}
+.detailImg{
+  width: 1024px;
+  margin: 0 auto;
+  border-top: solid 1px #dee2e6;
+  padding-top: 40px;
+}
+
+/* \프로덕트 */
+.product{
+  position: relative;
+}
+.product .listbox{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: relative;
+  margin-top: 85px;
+}
+
+.product .col-md-5{
+  width: 48%;
+  padding-bottom: 20px;
+}
+
+.product .col-md-5 h4{
+  font-size: 30px;
+  font-weight: 600;
+  padding: 10px 0;
+}
+
+.product .morebtn.btn2{
+  right: 50px;
+  bottom: 170px;
+}
+
+/* event */
+
+/* event */
+.eventBox{
+  position: relative;
+  margin-bottom: 200px;
+}
+.eventText{
+  position: absolute;
+  top: auto;
+  bottom: -100px;
+  left: 139px;
+  right: auto;
+  width: 377px;
+  height: 382px;
+  padding: 60px 40px 80px;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAE8AAAAJCAYAAABzNXH3AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA4RpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDYuMC1jMDAyIDc5LjE2NDQ2MCwgMjAyMC8wNS8xMi0xNjowNDoxNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpjODE4MTVhZC1jMzhlLTE0NGEtOWU1MS1mZWUwMmIwMDQ5ZjMiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NDBDQ0Y3OUQwODk2MTFFQjgzREI4ODJFODRDN0ZBQjIiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NDBDQ0Y3OUMwODk2MTFFQjgzREI4ODJFODRDN0ZBQjIiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NjE5NDg4MDQtNGUwOS01MDQxLTg5YzItYWQyN2MyYzEyZjhjIiBzdFJlZjpkb2N1bWVudElEPSJhZG9iZTpkb2NpZDpwaG90b3Nob3A6YjRjOTQ1OGEtZjYyNy0xMWVhLTk4YTMtZTM5MzlhYzk3ZGIzIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8++RoFrAAAACtJREFUeNrs0DENAAAIA7DhXzQo4OEjaSU0YdMKBAoUKBCBAh8Hlsm7EWAARa8I+YSna6YAAAAASUVORK5CYII=) left 50px bottom 50px no-repeat #fff;
+  box-shadow: 13px 13px 27px rgba(0, 0, 0, 0.15);
+  transition: bottom 0.4s ease;
+}
+
+.eventText h4{
+  font-weight: 700;
+  font-size: 27px;
+  margin-bottom: 20px;
+}
+
+.eventText p{
+  font-size: 16px;
+}
+
+.eventList{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 100px 0;
+}
+
+.eventList .col-md-3{
+  padding-top: 40px;
+}
+
+.eventList h4{
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.eventList p{
+  color: #ccc;
+}
+
+.modal.show .modal-dialog{
+  max-width: 1000px;
+
+}
+
+.modal-content{
+  height: 95vh;
+  overflow: auto;
+}
+
+.modal-content::-webkit-scrollbar{
+  display: none;
+}
+
+.modal-content img{
+  width: 100%;
+}
+
+
+footer {
+  position: relative;
+  height: 220px;
+  padding: 60px 370px 62px 100px;
+  background: #fff;
+  z-index: 16;
+
+}
+
+footer a{
+  text-decoration: none;
+}
+
+footer p{
+  margin: 0;
+  padding: 0;
+}
+
+footer .footer_link {
+  margin-bottom: 10px;
+}
+
+footer .footer_link a {
+  display: inline-block;
+  margin-right: 45px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #333;
+  line-height: 36px;
+}
+
+footer .footer_link a.priv {
+  color: #0890c0;
+  font-weight: 700;
+}
+
+footer .footer_link a:last-child {
+  margin-right: 0;
+}
+
+footer .address {
+  font-size: 14px;
+  font-weight: 300;
+  color: #777;
+  line-height: 30px;
+}
+
+/* 2022-02-15 추가 */
+footer .registration {
+  font-size: 14px;
+  font-weight: 300;
+  color: #777;
+  line-height: 30px;
+}
+/* // 2022-02-15 추가 */
+
+footer .copy {
+  font-size: 12px;
+  font-weight: 300;
+  color: #777;
+  line-height: 22px;
+  letter-spacing: 1px;
+}
+
+
+
+footer .link_selec {
+  position: relative;
+  top: 80px;
+  right: 80px;
+  width: 240px;
+}
+
+
+
+footer .link_selec .fam_link_div > div a {
+  display: block;
+  padding-top: 26px;
+  font-size: 16px;
+  font-weight: 300;
+  color: #fff;
+  line-height: 1;
+}
 

@@ -10,7 +10,7 @@ const Detail = (props) => {
     useEffect(()=>{
         setTimeout(function(){
             setAlerta(false);
-        }, 3000);
+        }, 4000);
     })
 
     let [num, setNum] = useState(0);
@@ -21,22 +21,33 @@ const Detail = (props) => {
     }, [num]);
 
     return (
-        <div className="container">
-            {
-                alerta == true ? <div className='alert alert-warning'>3초 뒤에 사라짐</div> : null
-            }
-                <div className="row">
-                    <div className="col-md-6">
-                    <img src={process.env.PUBLIC_URL + '/img/bed_0' + props.items[id].id + '.jpg'}/>
+        <div className="detailBox">
+
+                <div className='detail1'>
+                    <div className="detailMain">
+                    <img src={process.env.PUBLIC_URL + '/img/bdetail_0' + props.items[id].id + '.jpg'}/>
+                    <h2>{props.items[id].title}</h2>
+                    <div className='popup'>
+                    {
+                        alerta == true ? <div>
+                            <img src={process.env.PUBLIC_URL + '/img/pop.png'}/>
+                        </div> : null
+                    }
                     </div>
-                    <div className="col-md-6">
+                    </div>
+                    <div className="sticky">
                     <p>{props.items[id].content}</p>
                     <h4>{props.items[id].title}</h4>
                     <p>{props.items[id].type}</p>
                     <p>{props.items[id].color}</p>
-                    <p>수량: <input onChange={(e)=>{setNum(e.target.value)}} type="text"/></p>
-                    <button className="btn btn-danger">주문하기</button> 
+                    <p className='input'><input placeholder='수량을 입력하세요' onChange={(e)=>{setNum(e.target.value)}} type="text"/></p>
+                    <button className="btn btn-blue">주문하기</button> 
+                    <button className="btn btn-green">관심상품</button> 
                 </div>
+
+            </div>
+            <div className='detailImg'>
+                <img src={process.env.PUBLIC_URL + '/img/bdetail_0' + props.items[id].id + '.avif'}/>
             </div>
         </div>
     );

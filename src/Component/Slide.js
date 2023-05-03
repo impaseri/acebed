@@ -3,9 +3,11 @@ import Slider from "react-slick";
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { maindata } from "../data.js";
+import {useNavigate} from 'react-router-dom';
 
 let main = maindata;
-export default class SimpleSlider extends Component {
+
+export default class SimpleSlider extends Component {    
     render() {
       const settings = {
         // dots: true,
@@ -15,13 +17,14 @@ export default class SimpleSlider extends Component {
         slidesToScroll: 1,
         arrow: true
       };
+
       
       return (
         <div className="mainBanner container">
           <Slider {...settings}>
             {main.map(function(parm, i){
               return(
-                <div className="flex">
+                <div className="flex" >
                 <div className="bannerText">
                 <h3>{main[i].content1}</h3>
                 <h3>{main[i].content2}</h3>
