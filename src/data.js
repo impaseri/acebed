@@ -46,6 +46,12 @@ let data = [
     }
 ];
 
+let datatwo = [
+    {},
+    {},
+    {}
+]
+
 let maindata = [
     {
         id: 1,
@@ -143,4 +149,44 @@ let event = [
     }
 ]
 
-export {data, maindata, video, event};
+
+let info = [
+    {
+        id: 0,
+        title: "쏠림 FREE",
+        text: "탄력의 대칭을 위해 2개의 스프링을 서로 마주보게 판조립하는 신기술인 FTF공법을 적용하여 어떤 방향에서 힘을 받아도 쏠리지 않습니다"
+    },
+    {
+        id: 1,
+        title: "흔들림 FREE",
+        text: "스프링판 위로 하나하나 독립되어 돌출된 Fit Zone은 따로따로 움직이기 때문에 진동을 차단해 주어 옆 사람이 뒤척여도 흔들리지 않습니다"
+    },
+    {
+        id: 2,
+        title: "꺼짐 FREE",
+        text: "위에서 한번, 두번 받쳐주는 더블 쿠션 시스템이라 오래 사용해도 꺼지지 않고 처음 같은 탄력을 제공합니다"
+    },
+    {
+        id: 3,
+        title: "소음 FREE",
+        text: "세계 15개국 발명특허를 획득한 Z 센서가 스프링간의 마찰로 인한 소음을 방지해주어 보다 충만한 휴식을 드립니다"
+    },
+    {
+        id: 4,
+        title: "빈틈 FREE",
+        text: "피아노 건반처럼 따로따로 독립된 Fit Zone이 인체 곡선을 따라 맞춰주어 어떤 체형이라도 빈틈없이 지지해줍니다."
+    }
+]
+
+let num = [
+    {id: 0},
+    {id: 1},
+    {id: 2},
+    {id: 3},
+    {id: 4},
+    {id: 5},
+    {id: 6},
+    {id: 7}
+]
+
+export {data, maindata, video, event, info, num};

@@ -12,6 +12,7 @@ const Event = (props) => {
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+
     return (
         <div className='container'>
             <h3 className='title'>EVENT</h3>
@@ -34,15 +35,16 @@ const Event = (props) => {
                                 </div>
                             </>
                         )
+                        
                     })}
-                        <Modal show={show} onHide={handleClose}>
-                        <Modal.Header closeButton>
-                        <Modal.Title>{nevent[0].title}</Modal.Title>
-                        </Modal.Header>
-                        <Modal.Body>
-                            <img src={process.env.PUBLIC_URL + '/img/eventbig_0'+ nevent[0].id +'.jpg'} />
-                        </Modal.Body>
-                        </Modal>
+                    <Modal show={show} onHide={handleClose}>
+                    <Modal.Header closeButton>
+                    <Modal.Title>{nevent[0].title}</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                        <img src={process.env.PUBLIC_URL + '/img/eventbig_0'+ nevent[0].id+'.jpg'}/>
+                    </Modal.Body>
+                    </Modal>
             </div>
         </div>
     );

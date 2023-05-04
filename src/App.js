@@ -29,7 +29,7 @@ function App() {
           </Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link onClick={()=>{navigate('/product')}}>PRODUCT</Nav.Link>
-            <Nav.Link onClick={()=>{navigate('/about')}}>NOTICE</Nav.Link>
+            <Nav.Link onClick={()=>{navigate('/about')}}>TECHNOLOGY</Nav.Link>
             <Nav.Link onClick={()=>{navigate('/event')}}>EVENT</Nav.Link>
           </Nav>
         </Container>
@@ -76,7 +76,9 @@ function App() {
         </Route>
         <Route path='/product' element={<Product/>}></Route>
         <Route path='/detail/:id' element={<Detail items={items}/>}></Route>
-        <Route path='*' element={<div>Detail</div>}></Route>
+        <Route path='*' element={<div className='center'>
+          <img src={process.env.PUBLIC_URL + '/img/prepare.jpg'}/>
+        </div>}></Route>
       </Routes>
 
       <footer id="footer" data-swiftype-index="false" className='container'>
